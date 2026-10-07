@@ -1,0 +1,26 @@
+[workspace]
+name = "ebi-causality-course"
+version = "0.1.0"
+description = "Notebooks and tutorials for the EBI causality course"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64", "win-64"]
+
+[dependencies]
+python = "3.12.*"
+jupyterlab = ">=4.2,<5"
+ipykernel = ">=6.29,<7"
+python-graphviz = ">=0.21,<0.22"
+ipywidgets = ">=8.1.9,<9"
+
+[tasks]
+notebook = { cmd = "jupyter lab", description = "Launch JupyterLab with this project's environment as the kernel" }
+lab = { cmd = "jupyter lab", description = "Alias for the notebook task" }
+
+[pypi-dependencies]
+cvxpy = ">=1.9.3, <2"
+corneto = ">=1.0.0rc8, <2"
+decoupler = ">=2.2.0, <3"
+omnipath = ">=1.0.12, <2"
+matplotlib = ">=3.11.2, <4"
+pydeseq2 = ">=0.5.4, <0.6"
+gurobipy = ">=13.0.3, <14"
